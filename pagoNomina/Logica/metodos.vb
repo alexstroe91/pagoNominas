@@ -1,5 +1,5 @@
 ﻿Public Class metodos
-    Public Sub mostrarInfo(formulario As frmPrincipal)
+    Public Sub mostrarInfo(frm As formPagoNomina)
 
     End Sub
 

@@ -81,11 +81,11 @@
   <ItemGroup>
     <Compile Include="Datos\empleado.vb" />
     <Compile Include="Datos\plusesEmpleado.vb" />
-    <Compile Include="Formulario\frmPrincipal.vb">
+    <Compile Include="Formulario\formPagoNomina.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formulario\frmPrincipal.Designer.vb">
-      <DependentUpon>frmPrincipal.vb</DependentUpon>
+    <Compile Include="Formulario\formPagoNomina.Designer.vb">
+      <DependentUpon>formPagoNomina.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Logica\metodos.vb" />
@@ -106,8 +106,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Formulario\frmPrincipal.resx">
-      <DependentUpon>frmPrincipal.vb</DependentUpon>
+    <EmbeddedResource Include="Formulario\formPagoNomina.resx">
+      <DependentUpon>formPagoNomina.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
