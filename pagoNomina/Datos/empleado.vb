@@ -1,7 +1,7 @@
 ﻿Public Class empleado
     Dim _nif, _nombre, _apellidos As String
     Dim _fechaIngreso As Date
-    Dim _numHiijos As Integer
+    Dim _numHiijos As Decimal
 
     Public Sub New()
 
@@ -51,11 +51,11 @@
         End Set
     End Property
 
-    Public Property NumHiijos As Integer
+    Public Property NumHiijos As Decimal
         Get
             Return _numHiijos
         End Get
-        Set(value As Integer)
+        Set(value As Decimal)
             _numHiijos = value
         End Set
     End Property

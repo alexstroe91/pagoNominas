@@ -316,6 +316,7 @@ Partial Class formPagoNomina
         '
         Me.txtInfoEmpleado.BackColor = System.Drawing.Color.Maroon
         Me.txtInfoEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtInfoEmpleado.ForeColor = System.Drawing.Color.White
         Me.txtInfoEmpleado.Location = New System.Drawing.Point(33, 21)
         Me.txtInfoEmpleado.Name = "txtInfoEmpleado"
         Me.txtInfoEmpleado.ReadOnly = True
