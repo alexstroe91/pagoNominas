@@ -36,7 +36,7 @@ Partial Class formPagoNomina
         Me.Label6 = New System.Windows.Forms.Label()
         Me.numPrecioHora = New System.Windows.Forms.NumericUpDown()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.dteFechaIngreso = New System.Windows.Forms.DateTimePicker()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnCalcular = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -187,12 +187,12 @@ Partial Class formPagoNomina
         Me.Label7.TabIndex = 14
         Me.Label7.Text = "Precio por Hora"
         '
-        'DateTimePicker1
+        'dteFechaIngreso
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(394, 83)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker1.TabIndex = 16
+        Me.dteFechaIngreso.Location = New System.Drawing.Point(394, 83)
+        Me.dteFechaIngreso.Name = "dteFechaIngreso"
+        Me.dteFechaIngreso.Size = New System.Drawing.Size(200, 20)
+        Me.dteFechaIngreso.TabIndex = 16
         '
         'btnSalir
         '
@@ -332,7 +332,7 @@ Partial Class formPagoNomina
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnCalcular)
         Me.Controls.Add(Me.btnSalir)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.dteFechaIngreso)
         Me.Controls.Add(Me.numPrecioHora)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.numHorasTrabajadas)
@@ -374,7 +374,7 @@ Partial Class formPagoNomina
     Friend WithEvents Label6 As Label
     Friend WithEvents numPrecioHora As NumericUpDown
     Friend WithEvents Label7 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents dteFechaIngreso As DateTimePicker
     Friend WithEvents btnSalir As Button
     Friend WithEvents btnCalcular As Button
     Friend WithEvents GroupBox1 As GroupBox

@@ -1,12 +1,13 @@
 ﻿Public Class formPagoNomina
     Dim logica As New metodos
+    Dim empleado As New empleado
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Me.Close()
     End Sub
 
     Private Sub btnCalcular_Click(sender As Object, e As EventArgs) Handles btnCalcular.Click
-        logica.mostrarInfo(Me)
+        logica.mostrarInfo(Me, empleado)
 
     End Sub
 

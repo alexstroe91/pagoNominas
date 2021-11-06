@@ -1,13 +1,15 @@
-﻿Public Class empleado
+﻿Imports LibreriaNominasBuena.metodos
+
+Public Class empleado
     Dim _nif, _nombre, _apellidos As String
+
     Dim _fechaIngreso As Date
     Dim _numHiijos As Decimal
 
     Public Sub New()
 
     End Sub
-
-    Public Sub New(_nif As String, _nombre As String, _apellidos As String, _fechaIngreso As Date, _numHiijos As Integer)
+    Public Sub New(_nif As String, _nombre As String, _apellidos As String, _fechaIngreso As Date, _numHiijos As Decimal)
         Me._nif = _nif
         Me._nombre = _nombre
         Me._apellidos = _apellidos
@@ -59,7 +61,4 @@
             _numHiijos = value
         End Set
     End Property
-
-
-
 End Class
