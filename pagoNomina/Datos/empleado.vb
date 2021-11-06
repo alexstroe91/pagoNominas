@@ -2,7 +2,6 @@
 
 Public Class empleado
     Dim _nif, _nombre, _apellidos As String
-
     Dim _fechaIngreso As Date
     Dim _numHiijos As Decimal
 

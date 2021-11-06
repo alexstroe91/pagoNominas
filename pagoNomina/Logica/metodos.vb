@@ -1,8 +1,6 @@
 ﻿Imports LibreriaNominasBuena.metodos
 Public Class metodos
     Dim numHijos As Decimal
-    Const PLUSHIJOS As Integer = 50
-    Const PLUSPORTRIENIO As Integer = 100
 
     Public Sub desactivarContadorHijos(frm As formPagoNomina)
         'compurebo si el check box de tener hijos esta desactivado y si es así, desactivo el Numerico de contar cuantos hijos tiene
@@ -26,13 +24,12 @@ Public Class metodos
 
 
 
-    Public Sub mostrarInfo(frm As formPagoNomina, empleado As empleado)
+    Public Sub mostrarInfo(frm As formPagoNomina, empleado As empleadoPluses)
         'muestro en los txtbox de abajo la informacion correspondiente
         With frm
-            empleado.FechaIngreso = .dteFechaIngreso.Value
             .txtInfoEmpleado.Text = StrConv(.txtNombre.Text & Space(1) & .txtApellidos.Text, vbProperCase)
             .txtSueldoBruto.Text = CStr(.numHorasTrabajadas.Value * .numPrecioHora.Value) & " €"
-            .txtInfoPlusTrienios.Text = CStr(PLUSPORTRIENIO * calcularTrienios(empleado.FechaIngreso))
+            .txtInfoPlusTrienios.Text = CStr(empleado.dineroTrienios(empleado.FechaIngreso, frm))
         End With
     End Sub
 

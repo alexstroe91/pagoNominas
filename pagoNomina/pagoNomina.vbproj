@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\empleado.vb" />
+    <Compile Include="Datos\empleadoPluses.vb" />
     <Compile Include="Formulario\formPagoNomina.vb">
       <SubType>Form</SubType>
     </Compile>
