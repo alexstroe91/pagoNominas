@@ -1,4 +1,5 @@
-﻿Public Class formPagoNomina
+﻿Imports LibreriaNominasBuena.metodos
+Public Class formPagoNomina
     Dim logica As New metodos
     Dim empleado As New empleadoPluses
 
@@ -7,7 +8,11 @@
     End Sub
 
     Private Sub btnCalcular_Click(sender As Object, e As EventArgs) Handles btnCalcular.Click
-        logica.mostrarInfo(Me, empleado)
+        If validarNif(txtNif.Text) Then
+            logica.mostrarInfo(Me, empleado)
+        Else
+            MessageBox.Show("El NIF introducido no es correcto. \n Porfavor intoduce uno válido")
+        End If
 
     End Sub
 

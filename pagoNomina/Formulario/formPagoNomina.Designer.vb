@@ -151,9 +151,10 @@ Partial Class formPagoNomina
         'numHorasTrabajadas
         '
         Me.numHorasTrabajadas.Location = New System.Drawing.Point(153, 127)
+        Me.numHorasTrabajadas.Maximum = New Decimal(New Integer() {200, 0, 0, 0})
         Me.numHorasTrabajadas.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numHorasTrabajadas.Name = "numHorasTrabajadas"
-        Me.numHorasTrabajadas.Size = New System.Drawing.Size(36, 20)
+        Me.numHorasTrabajadas.Size = New System.Drawing.Size(47, 20)
         Me.numHorasTrabajadas.TabIndex = 13
         Me.numHorasTrabajadas.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '

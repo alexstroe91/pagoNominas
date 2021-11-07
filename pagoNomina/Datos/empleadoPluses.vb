@@ -12,4 +12,12 @@ Public Class empleadoPluses
 
     End Function
 
+    Public Function dineroHijos(form As formPagoNomina) As Integer
+        If form.cbxHijos.Checked = False Then
+            Return 0
+        Else
+            Return CInt(form.numNumHijos.Value * PLUSHIJOS)
+        End If
+    End Function
+
 End Class

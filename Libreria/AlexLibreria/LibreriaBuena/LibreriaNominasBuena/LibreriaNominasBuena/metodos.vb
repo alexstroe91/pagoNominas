@@ -8,7 +8,11 @@
         Dim arrayLetras() As String = {"T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"}
 
         'defino una variable donde recojo todos los numeros excepto el ultimo caracter que es una letra
-        Dim numeros As Integer = CInt(nif.Substring(0, nif.Length() - 1))
+        If nif.Length = Nothing Then
+            Return False
+        Else
+            Dim numeros As Integer = CInt(nif.Substring(0, nif.Length() - 1))
+        End If
 
         'recojo en una variable letraNif la letra que se corresponde al numero introducido
         Dim letraNif As Char = CChar(arrayLetras(numeros Mod 23))
