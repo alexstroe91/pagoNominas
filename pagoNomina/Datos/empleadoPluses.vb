@@ -1,4 +1,6 @@
 ﻿Imports LibreriaNominasBuena.metodos
+Imports pagoNomina
+
 Public Class empleadoPluses
 
     'declaramos la clase heredando de la clase empleado por lo que hereda todos sus atributos.
@@ -24,6 +26,10 @@ Public Class empleadoPluses
         Else
             Return CInt(form.numNumHijos.Value * PLUSHIJOS)
         End If
+    End Function
+
+    Public Overrides Function sueldoBruto(frm As formPagoNomina) As Double
+        Return MyBase.sueldoBruto(frm) + dineroHijos(frm) + dineroTrienios(FechaIngreso, frm)
     End Function
 
 End Class

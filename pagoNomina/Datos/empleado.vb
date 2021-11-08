@@ -5,6 +5,12 @@ Public Class empleado
     Dim _fechaIngreso As Date
     Dim _numHiijos As Decimal
 
+    Public Overridable Function sueldoBruto(frm As formPagoNomina) As Double
+        With frm
+            Return .numHorasTrabajadas.Value * .numPrecioHora.Value
+        End With
+    End Function
+
     Public Sub New()
 
     End Sub

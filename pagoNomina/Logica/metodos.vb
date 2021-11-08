@@ -37,17 +37,17 @@ Public Class metodos
         End If
     End Sub
 
-    Public Sub mostrarInfo(frm As formPagoNomina, empleado As empleadoPluses)
+    Public Sub mostrarInfo(frm As formPagoNomina, empleadoPluses As empleadoPluses, empleado As empleado)
         'muestro en los txtbox de abajo la informacion correspondiente
         With frm
             .txtInfoEmpleado.Text = StrConv(.txtNombre.Text & Space(1) & .txtApellidos.Text, vbProperCase)
-            .txtSueldoBruto.Text = CStr(FormatNumber(.numHorasTrabajadas.Value * .numPrecioHora.Value, 2)) & " €"
+            .txtSueldoBruto.Text = CStr(FormatNumber(empleado.sueldoBruto(frm), 2)) & " €"
             'uso el metodo de la clases empleadoPluses, en donde con el metodo de la libreria para calcular la cantidad de trienios que tiene, saque los pluses por los trienios
-            .txtInfoPlusTrienios.Text = CStr(empleado.dineroTrienios(empleado.FechaIngreso, frm))
+            .txtInfoPlusTrienios.Text = CStr(empleadoPluses.dineroTrienios(empleadoPluses.FechaIngreso, frm))
             'usandoel metodo creado en la clase de empleadoPluses, recogemos el valor que retorna el mismo metodo para mostrar los pluses por hijos
-            .txtInfoPlusHijos.Text = CStr(empleado.dineroHijos(frm))
+            .txtInfoPlusHijos.Text = CStr(empleadoPluses.dineroHijos(frm))
             'sumamos el sueldo bruto + los pluses y tendremos el sueldo neto
-            .txtInfoSuedoNeto.Text = CStr(FormatNumber(CInt((.numHorasTrabajadas.Value * .numPrecioHora.Value) + CDec(.txtInfoPlusTrienios.Text) + CDec(.txtInfoPlusHijos.Text)), 2)) & " €"
+            .txtInfoSuedoNeto.Text = CStr(FormatNumber(empleadoPluses.sueldoBruto(frm), 2)) & " €"
         End With
     End Sub
 

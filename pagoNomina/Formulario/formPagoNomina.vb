@@ -1,7 +1,8 @@
 ﻿Imports LibreriaNominasBuena.metodos
 Public Class formPagoNomina
     Dim logica As New metodos
-    Dim empleado As New empleadoPluses
+    Dim empleadoPluses As New empleadoPluses
+    Dim empleado As New empleado
 
     'hacemos que cuando se pulse el boton de salir, se cierre la aplicacion
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
@@ -16,7 +17,7 @@ Public Class formPagoNomina
             MessageBox.Show("Tienes que introducir un NIF")
         Else
             If validarNif(txtNif.Text) Then
-                logica.mostrarInfo(Me, empleado)
+                logica.mostrarInfo(Me, empleadoPluses, empleado)
             Else
                 MessageBox.Show("El NIF introducido no es correcto. Porfavor intoduce uno válido")
             End If
