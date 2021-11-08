@@ -37,6 +37,18 @@ Public Class metodos
         End If
     End Sub
 
+    Public Sub depurarNombre(frm As formPagoNomina, e As KeyPressEventArgs)
+        'prohibe la escritura de cualquier caracter que no sea una letra
+        If Char.IsWhiteSpace(e.KeyChar) Or Char.IsNumber(e.KeyChar) Or Char.IsSymbol(e.KeyChar) Or Char.IsPunctuation(e.KeyChar) Or Char.IsSeparator(e.KeyChar) Then
+            e.Handled = True
+        End If
+
+        'prohibe la escritura de mas de un espacio y cualquier otra caracter
+        If Char.IsWhiteSpace(e.KeyChar) AndAlso frm.txtNombre.Text.Contains(" ") Or Char.IsNumber(e.KeyChar) Or Char.IsSymbol(e.KeyChar) Or Char.IsPunctuation(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
     Public Sub mostrarInfo(frm As formPagoNomina, empleadoPluses As empleadoPluses, empleado As empleado)
         'muestro en los txtbox de abajo la informacion correspondiente
         With frm

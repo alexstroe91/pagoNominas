@@ -39,4 +39,9 @@ Public Class formPagoNomina
     Private Sub txtNif_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNif.KeyPress
         logica.nifCorrecto(Me, e)
     End Sub
+
+    'depuramos las casillas de nombre y apellidos para que solo se puedan introducir letras
+    Private Sub txtNombreYApellido_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNombre.KeyPress, txtApellidos.KeyPress
+        logica.depurarNombre(Me, e)
+    End Sub
 End Class
